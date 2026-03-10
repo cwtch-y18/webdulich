@@ -1,0 +1,51 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: webdulich_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./webdulich:/var/www/html
+    ports:
+      - "5173:5173" # Exposed for Vite HMR
+    networks:
+      - webdulich_net
+
+  web:
+    image: nginx:alpine
+    container_name: webdulich_nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./webdulich:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - webdulich_net
+    depends_on:
+      - app
+
+  db:
+    image: mysql:8.0
+    container_name: webdulich_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
+      MYSQL_USER: laravel
+    ports:
+      - "3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - webdulich_net
+
+networks:
+  webdulich_net:
+    driver: bridge
+
+volumes:
+  db_data:

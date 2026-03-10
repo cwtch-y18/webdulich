@@ -4,7 +4,8 @@ namespace App\Models\clients;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB; 
+use App\Models\clients\Tours;
 class Home extends Model
 {
     Use HasFactory;

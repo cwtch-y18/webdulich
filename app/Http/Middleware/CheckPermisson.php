@@ -18,9 +18,10 @@ class CheckPermisson
     {
         $user= Auth::guard('admin')->user();
         // Kiểm tra nếu người dùng không có quyền truy cập
-        if (!$user || !$user->hasPermission('permission')) { // Thay 'permission_name' bằng tên quyền bạn muốn kiểm tra
+        if (!$user || !$user->hasPermission('manage_user')) { // Thay 'permission_name' bằng tên quyền bạn muốn kiểm tra
             // Chuyển hướng hoặc trả về lỗi 403
-            abort(403, 'Bạn không có quyền truy cập vào trang này.');
+            toastr()->error('Bạn không có quyền truy cập .Vui lòng đăng nhập vào Admin để thực hiện.');
+            return redirect()->route('admin.dashboard');
         }
         
         return $next($request);

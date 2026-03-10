@@ -1,0 +1,455 @@
+.datetimepicker-custom {
+    padding: 0;
+}
+.datetimepicker-custom:focus{
+ border: none;
+}
+.main-header.header-one .main-menu .navbar-collapse .navigation .active {
+    background: var(--primary-color);
+}
+.menu-sidebar .dropdown-menu {
+    padding: 0;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+    list-style-type: none;
+    position: absolute;
+    top: 60px; /* Adjust to the correct position */
+    right: 0;
+}
+.menu-sidebar .dropdown-menu {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm box-shadow */
+}
+.dropdown-menu li {
+    padding: 8px 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+/* Loại bỏ đường viền dưới cho mục cuối cùng */
+.dropdown-menu li:last-child {
+    border-bottom: none; /* Không có đường viền dưới cho mục cuối cùng */
+}
+.dropdown-menu li:hover {
+    background-color: var(--primary-color);
+}
+.tour-gallery .gallery-between {
+    height: 100%;
+    padding-bottom: 10px;
+}
+.tour-gallery .gallery-item img {
+    height: 100%;
+    border-radius: 8px;
+}
+/* clear filter */
+.div_filter_clear {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+.clear_filter {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 3px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.clear_filter a {
+    color: #fff;
+    text-decoration: none;
+}
+.loader {
+    margin: auto;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid green;
+    border-bottom: 16px solid green;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden-content {
+    display: none; /* Ẩn nội dung */
+}
+.equal-block-fix {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+}
+.equal-content-fix {
+    justify-content: space-around;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+/****************************************
+*              PAGE USER PROFILE        *
+* ***************************************/
+#card_change_password {
+    display: none;
+}
+
+/****************************************
+*              PAGE CHECKOUT            *
+* ***************************************/
+.booking-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 20px;
+    display: flex;
+    gap: 24px;
+}
+
+.booking-container {
+    .booking__infor {
+        background-color: #f6f8fa;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: none;
+        gap: 16px;
+        padding: 30px;
+    }
+
+    .booking-info {
+        flex: 1;
+    }
+
+    .booking-summary {
+        width: 400px;
+    }
+
+    /* Header */
+    .booking-header {
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    /* Form Styling */
+
+    .booking__infor .form-group label {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .booking__infor .form-group input {
+        width: 100%;
+        height: 56px;
+        padding: 16px 17px;
+        font-size: 1rem;
+        border: 0px solid #e2e4e5;
+        border-radius: 5px;
+    }
+
+    /* Quantity Selector */
+    .booking__quantity {
+        display: flex;
+        gap: 24px;
+    }
+
+    .quantity-selector {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        border: 1px solid #e2e4e5;
+        padding: 20px;
+        justify-content: space-between;
+        gap: 48px;
+    }
+
+    .input__quanlity {
+        display: flex;
+        gap: 16px;
+    }
+
+    .quantity-btn {
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        border: 2px solid #63ab45;
+        color: #63ab45;
+    }
+
+    .quantity-input {
+        padding: 0;
+        width: 30px;
+        text-align: center;
+        border: none;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 0em;
+        font-weight: 500;
+        color: #63ab45;
+    }
+
+    /* Payment Options */
+    .payment-option {
+        margin-bottom: 15px;
+        padding: 15px;
+        border: 1px solid #e2e4e5;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .payment-option img {
+        width: 40px;
+    }
+
+    /* Privacy Agreement */
+    .privacy-section {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+    }
+
+    .privacy-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    /* Order Summary */
+    .order-summary {
+        border-top: 1px solid #d6d6d6;
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .total-price,
+    .total-price-booked,
+    .quantity__adults,
+    .quantity__children,
+    .quantity__adults-booked,
+    .quantity__children-booked {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    /* Button */
+    .booking-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: var(--secondary-color);
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .summary-section {
+        padding: 16px;
+        box-shadow: 10px 10px 36px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 50px;
+    }
+    .order-coupon {
+        border-top: 1px solid #d6d6d6;
+        margin: 20px 0;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 2px;
+        border-bottom: 1px solid #d6d6d6;
+    }
+    .order-coupon input {
+        border-radius: 8px;
+        border: 1px solid #e2e4e5;
+    }
+    .btn-submit-booking.inactive {
+        background-color: #f3d5b1;
+        cursor: not-allowed;
+    }
+
+    /* CSS cho thông báo lỗi */
+    .error-message {
+        color: red;
+        font-size: 0.9em;
+        display: none;
+        margin-top: 5px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .booking-container {
+        flex-direction: column;
+    }
+
+    .booking-summary {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.comment-review-wrap .comment-ratting-item .ratting i {
+    font-size: 36px;
+}
+.ratting i.active {
+    color: var(--secondary-color);
+}
+/****************************************
+*              PAGE LOGIN REGISTER       *
+* ***************************************/
+/* FIX trang trắng login / register */
+.login-template .main {
+    height: auto !important;
+    min-height: 100vh;
+    overflow: visible !important;
+    padding: 60px 0;
+}
+.forgot-template {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forgot-container {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.forgot-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.forgot-box h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.forgot-box p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-groupp {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-groupp input {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-groupp label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 5px;
+    font-size: 13px;
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.form-groupp input:focus + label,
+.form-groupp input:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #46de50;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #0d490c;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #75c899;
+}
+
+.back-login {
+    margin-top: 20px;
+}
+
+.back-login a {
+    text-decoration: none;
+    color:  #46de50;
+    font-size: 14px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.alert-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

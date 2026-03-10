@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\clients;
 
 use App\Http\Controllers\Controller;
-use App\Models\clients\User;
+use App\Models\Clients\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 

@@ -4,8 +4,8 @@ namespace App\Http\Controllers\clients;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\clients\Login;
-use App\Models\clients\User;
+use App\Models\Clients\Login;
+use App\Models\Clients\User;
 use Illuminate\Support\Facades\Mail;
 class RegisterController extends Controller
 {

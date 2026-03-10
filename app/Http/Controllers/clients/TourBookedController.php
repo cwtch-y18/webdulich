@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\clients;
 
 use App\Http\Controllers\Controller;
-use App\Models\clients\Booking;
-use App\Models\clients\Tours;
+use App\Models\Clients\Booking;
+use App\Models\Clients\Tours;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 

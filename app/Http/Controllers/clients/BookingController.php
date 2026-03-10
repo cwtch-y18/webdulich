@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\clients;
 use App\Models\clients\Booking;
-use App\Models\clients\Checkout;
-use App\Models\clients\Tours;
+use App\Models\Clients\Checkout;
+use App\Models\Clients\Tours;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
